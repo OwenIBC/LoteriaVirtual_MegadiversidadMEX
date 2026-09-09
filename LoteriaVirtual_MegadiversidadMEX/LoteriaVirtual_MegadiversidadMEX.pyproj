@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>87f207f7-3c6e-48b6-b8fc-1eba8818a270</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>LoteriaVirtual_MegadiversidadMEX.py</StartupFile>
+    <StartupFile>app.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

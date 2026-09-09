@@ -5,9 +5,9 @@ import json
 import random
 import pygame
 
-# ---------------------------------------------------------
+
 # CONFIGURACIÓN Y CONSTANTES
-# ---------------------------------------------------------
+
 ANCHO = 900
 ALTO = 700
 FPS = 60
@@ -15,16 +15,16 @@ FPS = 60
 # Colores (R, G, B)
 COLOR_FONDO = (245, 240, 230)
 COLOR_TEXTO = (30, 30, 30)
-COLOR_PRIMARIO = (38, 115, 77)     # Verde tradicional
-COLOR_SECUNDARIO = (190, 50, 45)   # Rojo mexicano
+COLOR_PRIMARIO = (38, 115, 77)     # Verde 
+COLOR_SECUNDARIO = (190, 50, 45)   # Rojo 
 COLOR_BOTON = (52, 73, 94)
 COLOR_BOTON_HOVER = (41, 128, 185)
 COLOR_BLANCO = (255, 255, 255)
-COLOR_SOMBRA = (0, 0, 0, 160)       # Negro semitransparente para marcar casilla
+COLOR_SOMBRA = (0, 0, 0, 160)       # Negro (transparenet)
 
 ARCHIVO_ESTADO = "plantillas_disponibles.json"
 
-# Las 16 plantillas balanceadas de 3x3 (9 cartas cada una)
+# 16 plant. 3x3 
 PLANTILLAS = [
     [1, 2, 3, 9, 12, 13, 17, 19, 21],
     [4, 5, 11, 12, 16, 17, 22, 27, 28],
@@ -373,3 +373,8 @@ def ejecutar_juego():
 
 if __name__ == "__main__":
     ejecutar_juego()
+
+    # Genera y guarda la imagen del QR como archivo
+    img_qr = qrcode.make(url_juego)
+    img_qr.save("codigo_qr.png")
+    print("\n✅ Se guardó la imagen 'codigo_qr.png' en tu carpeta. ¡Ábrela para proyectarla!")
